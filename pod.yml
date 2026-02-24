@@ -2,9 +2,26 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
+  labels:
+    app: zen
 spec:
   containers:
   - name: nginx
     image: nginx:1.14.2
     ports:
     - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  selector:
+    app: zen
+spec:
+  selector:
+    app: zen
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
