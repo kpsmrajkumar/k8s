@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         name: nginx-rs
-  containers:
-  - name: nginx
-    image: nginx:latest
+  spec:
+    containers:
+    - name: nginx
+      image: nginx:latest
