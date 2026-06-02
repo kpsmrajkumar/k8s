@@ -24,10 +24,3 @@ spec:
             name: zen-service-2
             port:
               number: 80
-      - path: /app3(/|$)(.*)
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: zen-service-3
-            port:
-              number: 80
