@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: zen-service-3
+  name: my-service-3
 spec:
   type: NodePort
   selector:
