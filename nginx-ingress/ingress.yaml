@@ -14,20 +14,20 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-            name: my-service-1
+            name: zen-service-1
             port:
               number: 80
       - path: /app2(/|$)(.*)
         pathType: ImplementationSpecific
         backend:
           service:
-            name: my-service-2
+            name: zen-service-2
             port:
               number: 80
       - path: /app3(/|$)(.*)
         pathType: ImplementationSpecific
         backend:
           service:
-            name: my-service-3
+            name: zen-service-3
             port:
               number: 80
