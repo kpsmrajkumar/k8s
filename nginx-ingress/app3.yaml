@@ -1,10 +1,10 @@
-### traefik deployment
+### harbor-portal deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: traefik-deployment
+  name: harbor-portal-deployment
   labels:
-    app3: traefik
+    app3: harbor-portal
 spec:
   replicas: 1
   selector:
@@ -16,10 +16,10 @@ spec:
         app3: zen3
     spec:
       containers:
-      - name: traefik
-        image: traefik
+      - name: harbor-portal
+        image: hardened-images/dhi/harbor-portal
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -31,5 +31,5 @@ spec:
     app3: zen3
   ports: 
     - port: 80
-      targetPort: 80
+      targetPort: 8080
       nodePort: 30010
