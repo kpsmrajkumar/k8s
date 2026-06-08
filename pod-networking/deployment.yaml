@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: nginx
+        tier: app
     spec:
       containers:
       - name: nginx
@@ -48,6 +49,7 @@ spec:
     metadata:
       labels:
         app: httpd
+        tier: web
     spec:
       containers:
       - name: httpd
